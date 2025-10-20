@@ -1,8 +1,4 @@
-- 👋 Hi, my name is Tristan Dobrowney
-- 👀 I’m interested in Computer Science and Engineering.
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+
 
 <!---
 DobrowneyT/DobrowneyT is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
