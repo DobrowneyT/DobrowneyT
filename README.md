@@ -1,8 +1,8 @@
 # Hi, I'm Tristan Dobrowney 👋
 
-**Computer Engineering Student | Embedded Systems Enthusiast | Hardware-Software Integration**
+**Computer Engineer | Embedded Systems Enthusiast | Hardware-Software Integration**
 
-I'm a Computer Engineering student at the University of Manitoba specializing in **computer architecture**, **instruction set design**, and **embedded systems**. I love working at the intersection of hardware and software, building systems from the ground up.
+I graduated with a degree in Computer Engineerening at the University of Manitoba specializing in **computer architecture**, **instruction set design**, and **embedded systems**. I love working at the intersection of hardware and software, building systems from the ground up. Currently working for PTx Trimble where we develop a full-stack retrofit autonomy platforms for tractors.
 
 ## 🔧 What I Do
 
@@ -13,11 +13,11 @@ I work on low-level systems that bridge the gap between silicon and code:
 - **Embedded Systems**: Building real-time control systems with precise timing and resource constraints
 - **Communication Protocols**: Implementing CAN, J1939, ISOBUS, SPI, and I2C for industrial applications
 
-Currently working as a **Controls Application Engineer Intern at MacDon Industries**, where I develop systems integration solutions for agricultural equipment using industrial communication protocols.
+Currently working as a **Embedded Developer at PTx Trimble**, where I develop systems integration solutions for retrofit autonomy for tractors.
 
 ## 🛠️ Technical Skills
 
-**Languages**: C • C++ • Python • Verilog • Java • CUDA • Assembly
+**Languages**: C • C++ • C# • Python • Verilog • Java • CUDA • Assembly
 
 **Hardware**: FPGA • Microcontrollers • Circuit Design • KiCAD • Altium
 
@@ -99,7 +99,3 @@ Before transitioning to engineering, I was a First Soloist with Canada's Royal W
 - **Email**: dobrownt@myumanitoba.ca
 - **GitHub**: [@DobrowneyT](https://github.com/DobrowneyT)
 - **Location**: Winnipeg, MB, Canada
-
----
-
-*Expected Graduation: October 2025 | Open to opportunities in embedded systems, computer architecture, and hardware engineering*
