@@ -1,101 +1,96 @@
 # Hi, I'm Tristan Dobrowney 👋
 
-**Computer Engineer | Embedded Systems Enthusiast | Hardware-Software Integration**
+**Systems Engineer | Embedded Linux & Firmware | Hardware-Software Integration**
 
-I graduated with a degree in Computer Engineerening at the University of Manitoba specializing in **computer architecture**, **instruction set design**, and **embedded systems**. I love working at the intersection of hardware and software, building systems from the ground up. Currently working for PTx Trimble where we develop a full-stack retrofit autonomy platforms for tractors.
+Computer Engineer (B.Sc., With Distinction, University of Manitoba, 2026) working on autonomous agricultural machinery at PTx Trimble, where I'm a Systems Engineer on the OutRun intelligence platform. I like owning a system end to end: schematic and board, microcontroller firmware, the Linux kernel and user space on top, and the tooling that ships it to a fleet.
 
-## 🔧 What I Do
+Dual UK and Canadian citizen.
 
-I work on low-level systems that bridge the gap between silicon and code:
+## 🔧 What I work on
 
-- **Hardware Interfacing**: Designing firmware and drivers for microcontrollers, FPGAs, and custom hardware
-- **Computer Architecture**: Exploring instruction set design, processor design, and hardware optimization
-- **Embedded Systems**: Building real-time control systems with precise timing and resource constraints
-- **Communication Protocols**: Implementing CAN, J1939, ISOBUS, SPI, and I2C for industrial applications
+- **Systems integration** of sensors, vision hardware, controllers and compute across harnessing, firmware, embedded Linux and ROS2
+- **Embedded Linux** on NVIDIA Jetson: custom kernels, Kconfig, U-Boot/UEFI, systemd, SocketCAN, NetworkManager, Debian packaging and fleet updates
+- **Firmware** for STM32 (Cortex-M) in C: USB drivers, interrupt-driven peripherals, FreeRTOS and bare metal
+- **Vehicle networks**: CAN, J1939, ISOBUS, automotive Ethernet; DBC authoring in Vector CANdb++
+- **Hardware design**: KiCad schematics and layouts, from power regulation to precision analog front ends
+- **Developer tooling**: GitHub Actions CI with self-hosted and ephemeral runners, Docker, unit-test frameworks, hardware-in-the-loop test rigs
+- **Agentic development**: daily use of Claude Code with multi-agent workflows, custom skills and MCP servers
 
-Currently working as a **Embedded Developer at PTx Trimble**, where I develop systems integration solutions for retrofit autonomy for tractors.
+## 🛠️ Skills
 
-## 🛠️ Technical Skills
+**Languages**: C • C++ • Python • C# • TypeScript/JavaScript • Verilog • Lua • Bash • SQL
 
-**Languages**: C • C++ • C# • Python • Verilog • Java • CUDA • Assembly
+**Embedded**: STM32, FreeRTOS, RP2350 (Pico 2), Arduino, NVIDIA Jetson, Raspberry Pi, FPGA (Altera DE-2, DE-10)
 
-**Hardware**: FPGA • Microcontrollers • Circuit Design • KiCAD • Altium
+**Linux**: kernel configuration and builds, U-Boot/UEFI, systemd, Debian packaging, apt repositories, Docker, nginx, VPS administration
 
-**Systems**: ROS2 • MPI • OpenMP • Real-Time Operating Systems
+**Protocols**: CAN • J1939 • ISOBUS • Automotive Ethernet • USB • SPI • I2C • UART • MQTT
 
-**Protocols**: CAN • J1939 • ISOBUS • SPI • I2C
+**Robotics & tooling**: ROS2 (Humble, Jazzy, ros2_control), MATLAB/Simulink, Vector CANdb++, KiCad, Altium, LaTeX
 
-## 🚀 Featured Projects
+**Web & data**: Node.js (Express, Fastify, WebSockets), React/Vite, FastAPI, PostgreSQL, MariaDB, SQLite
 
-### [Bot-Hoven: Autonomous Piano-Playing Robot](https://www.youtube.com/@Bot-hoven)
-*Capstone Project - IEEE Winnipeg Section 2nd Prize Winner*
+## 🚀 Projects
 
-A fully autonomous robot capable of playing piano pieces using computer vision and precise motor control.
+### [Bot-Hoven](https://github.com/bot-hoven) - autonomous piano-playing robot
+*Capstone project, IEEE Winnipeg Section 2nd Prize (2025)*
 
-- Architected ROS2 hardware interface supporting 20+ actuators with sub-millisecond timing precision
-- Designed modular hardware abstraction layer integrating servo controllers, stepper drivers, and GPIO expanders
-- Implemented optimized batch communication protocols reducing I2C overhead by 60%
-- Developed real-time multi-actuator coordination system
+Wrote the ros2_control hardware-interface layer in C++: an I2C bus manager and SPI peripheral over Linux character devices, with PCA9685 servo, MCP23017 solenoid and CL42T stepper plugins driving 20+ actuators with sub-millisecond timing. Also the Raspberry Pi bring-up and the Pico 2 SPI-slave stepper firmware (one core per motor, PID). Batched I2C transactions cut bus overhead by 60%.
 
-**Tech Stack**: ROS2, C++, Python, Arduino, Custom Hardware
+**Stack**: ROS2 Jazzy, ros2_control, C++17, Pico SDK, CMake, Docker on arm64
 
----
+### Magnetic-field sensor data acquisition
+*Undergraduate research, UManitoba Electromagnetic Imaging Lab (2025)*
 
-### [TeaMate: Autonomous Tea-Making Robot](https://github.com/DobrowneyT/teamate)
+Designed a four-board KiCad system for a three-channel research magnetometer: power regulation (±12 V, 5 V, 3.3 V, 1 V rails), stacked signal-conditioning boards with DAC-driven DC nulling and I2C-controlled gain, a MAX11040K ADC breakout (3 × 24 kSPS over SPI, GPS PPS sync), and a Raspberry Pi 5 carrier. Wrote the C++ acquisition code for the ADC, DAC, accelerometer and GPS.
 
-A 3-DOF robotic arm that autonomously prepares tea with precision positioning and sensor integration.
+**Stack**: KiCad, C++, SPI/I2C/UART, Raspberry Pi 5
 
-- Implemented inverse kinematics and PID control for precise movement
-- Developed real-time sensor fusion with trajectory planning algorithms
-- Achieved sub-millimeter accuracy through encoder feedback and auto-calibration
-- Integrated collision avoidance and safety systems
+### [TeaMate](https://github.com/DobrowneyT/teamate) - autonomous tea-making robot
 
-**Tech Stack**: C++, Arduino Mega 2560, Custom Sensors, 3D Design
+A 3-DOF arm with inverse kinematics and PID control on an Arduino Mega 2560, sub-millimetre positioning from encoder feedback and auto-calibration, and five sensor types for a safe, collision-aware brewing sequence.
 
----
+**Stack**: C++, Arduino
 
-### CAN Trace Plotter and Analyzer
-*Industrial Tool - MacDon Industries*
+### [pagefetch](https://github.com/DobrowneyT/pagefetch) - browser-backed fetch service for agents
 
-Production-ready desktop application for automotive CAN bus diagnostics and analysis.
+Self-hosted Chromium-in-Docker service that fetches pages plain HTTP can't, exposed over MCP and plain HTTP, with robots.txt enforced by default, a SQLite cache and server-side politeness caps. Specified as a PRD first; built with Claude Code.
 
-- Multi-format trace file parser (.trc, .asc, .bfl, .csv) with DBC database integration
-- Real-time visualization with support for 4 simultaneous plot displays
-- Statistical analysis tools for system debugging workflows
-- Drag-and-drop interface built with PyQt6
+**Stack**: TypeScript, Docker, MCP, SQLite
 
-**Tech Stack**: Python, PyQt6, CAN Protocol, Data Visualization
+### [Faction dashboard](https://github.com/DobrowneyT/torn-dashboard) for an online game community
 
-## 🎯 Current Interests
+A multi-tenant web app I run for several player groups: Fastify API, WebSocket live updates, PostgreSQL with one database per tenant, and a Docker Compose stack on a VPS I administer. About 320 test files, CI on a self-hosted runner with changelog and lint gates. AI-assisted with Claude Code; I own the architecture, reviews and tests.
 
-I'm particularly interested in:
+**Stack**: TypeScript, Node.js, React, PostgreSQL 17, Docker, nginx, systemd
 
-- **Instruction Set Architecture (ISA)**: Designing and optimizing instruction sets for specialized processors
-- **Hardware-Software Co-Design**: Building systems where hardware and firmware work together efficiently
-- **FPGA Development**: Implementing custom logic and processors in Verilog/VHDL
-- **Real-Time Systems**: Precise timing control and deterministic behavior in embedded environments
-- **High-Performance Computing**: Parallel processing with CUDA, MPI, and OpenMP
+### CAN trace plotter
+*Internal tool, MacDon Industries*
 
-## 📚 Research & Experience
+PyQt6 desktop app that parses .trc/.asc/.bfl/.csv traces with DBC decoding, four simultaneous plots and statistics; shipped as an executable to the controls team.
 
-**Undergraduate Research** - *UManitoba Electromagnetic Imaging Lab*
-- Developed embedded firmware for SPI/I2C communication systems
-- Designed prototype hail monitoring device with patent potential
-- Collaborated on electromagnetic imaging for weather monitoring
+**Stack**: Python, PyQt6
+
+### 16-bit RISC processor
+Parametrised single-cycle CPU in Verilog on an Altera DE-10 FPGA: full fetch/decode/execute/memory/write-back datapath with condition-code branching, with ALU, register file and memory widths set from one parameter.
+
+## 🎯 Where I'm heading
+
+Kernel development, and eventually computer architecture and instruction-set design. The processor project above is where that started.
 
 ## 🏆 Recognition
 
+- IEEE Winnipeg Section 2nd Prize, capstone project (2025)
 - Faculty of Engineering Undergraduate Research Award (2025)
-- IEEE Winnipeg Section 2nd Prize for Capstone Project (2025)
-- Dean's Honour List (2020-Present)
-- Multiple engineering scholarships and awards
+- NSERC Undergraduate Student Research Award (2022)
+- Dean's Honour List every term; graduated With Distinction (2026)
 
-## 💡 A Bit About Me
+## 💡 Before engineering
 
-Before transitioning to engineering, I was a First Soloist with Canada's Royal Winnipeg Ballet. That background taught me discipline, attention to detail, and creative problem-solving—skills that translate surprisingly well to debugging embedded systems at 3 AM.
+I spent eight years as a professional dancer, including Soloist with Canada's Royal Winnipeg Ballet and Principal Dancer at the Lviv National Opera and Ballet, and eight years as the elected union representative for the RWB dancers. Touring taught me to debug under pressure and to keep the show running.
 
-## 📫 Get In Touch
+## 📫 Contact
 
 - **Email**: dobrownt@myumanitoba.ca
-- **GitHub**: [@DobrowneyT](https://github.com/DobrowneyT)
-- **Location**: Winnipeg, MB, Canada
+- **LinkedIn**: [tristandobrowney](https://www.linkedin.com/in/tristandobrowney-68b3ba161)
+- **Location**: Winnipeg, Canada
